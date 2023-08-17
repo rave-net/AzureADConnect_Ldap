@@ -1,7 +1,9 @@
 [common]
-mailadmin = exemple@domain.com
-passwordadmin = password
-proxy =
+;Azure Tenant and app info
+tenant_id = your_azure_ad_tenant_id
+client_id = YOUR_CLIENT_ID
+client_secret = YOUR_CLIENT_SECRET
+
 
 credential_cache_file = /root/last_token_azuread.json
 
@@ -17,8 +19,8 @@ verify_cert_ldap        = False
 path_to_bundle_crt_ldap = lib_python_certifi
 ;for lib_python_certifi  value is  /usr/local/lib/python3.9/dist-packages/certifi/cacert.pem
 
-basedn                  = dc=demo,dc=lan
-user_ldap               = cn=admin,dc=demo,dc=lan
+basedn                  = dc=demo,dc=lan or ou=demo,o=lan
+user_ldap               = cn=admin,dc=demo,dc=lan or cn=admin,ou=demo,o=lan
 password_ldap           = password
 
 do_delete=True
